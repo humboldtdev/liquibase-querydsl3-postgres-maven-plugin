@@ -1,7 +1,6 @@
 # Liquibase to Querydsl Maven Plugin
 
-[![Release](https://jitpack.io/v/User/Repo.svg)]
-(https://jitpack.io/#User/Repo)
+[![Release](https://jitpack.io/v/humboldtdev/liquibase-querydsl3-postgres-maven-plugin.svg)](https://jitpack.io/#humboldtdev/liquibase-querydsl3-postgres-maven-plugin)
 
 This Maven plugin generates [Querydsl SQL classes](http://www.querydsl.com/static/querydsl/3.7.4/reference/html_single/#sql_integration)
  from a [Liquibase](http://www.liquibase.org/) script. This version generates 
