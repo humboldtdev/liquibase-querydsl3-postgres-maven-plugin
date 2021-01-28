@@ -18,7 +18,7 @@ Default configuration:
             <plugin>
                 <groupId>com.github.humboldtdev</groupId>
                 <artifactId>liquibase-querydsl3-postgres-maven-plugin</artifactId>
-                <version>1.0</version>
+                <version>1.0.1</version>
                 <configuration>
                     <outputDirectory>target/generated-sources/SQL</outputDirectory>
                     <targetPackage>uk.co.humboldt.MyApplication.SQL</targetPackage>

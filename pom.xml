@@ -4,8 +4,8 @@
     <groupId>com.github.humboldtdev</groupId>
     <artifactId>liquibase-querydsl3-postgres-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.0</version>
-    <name>liquibase-querydsl2-postgres-maven-plugin Maven Mojo</name>
+    <version>1.0.1</version>
+    <name>liquibase-querydsl3-postgres-maven-plugin Maven Mojo</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -50,7 +50,7 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>postgresql </artifactId>
-            <version>1.9.1</version>
+            <version>1.15.1</version>
         </dependency>
 
     </dependencies>
