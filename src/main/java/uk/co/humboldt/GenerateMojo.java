@@ -106,7 +106,7 @@ public class GenerateMojo
     private Liquibase createLiquibase(Connection c)
             throws LiquibaseException {
         return new Liquibase(liquibaseFile.getName(),
-                new FileSystemResourceAccessor(liquibaseFile.getParent()),
+                new LoggingResourceAccessor(getLog(), liquibaseFile.getParent()),
                 createDatabase(c));
     }
 
