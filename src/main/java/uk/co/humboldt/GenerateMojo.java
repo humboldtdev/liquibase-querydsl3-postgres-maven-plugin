@@ -35,6 +35,7 @@ import org.apache.maven.project.MavenProject;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 
@@ -96,6 +97,7 @@ public class GenerateMojo
             MetaDataExporter exporter = new MetaDataExporter();
             exporter.setPackageName(targetPackage);
             exporter.setTargetFolder(outputDirectory);
+            exporter.setTableTypesToExport("TABLE, VIEW, MATERIALIZED VIEW");
             Configuration conf = new Configuration(SQLTemplates.DEFAULT);
             conf.registerNumeric(1, 30, 0, 3, BigDecimal.class);
             exporter.setConfiguration(conf);
@@ -104,7 +106,7 @@ public class GenerateMojo
     }
 
     private Liquibase createLiquibase(Connection c)
-            throws LiquibaseException {
+            throws LiquibaseException, IOException {
         return new Liquibase(liquibaseFile.getName(),
                 new LoggingResourceAccessor(getLog(), liquibaseFile.getParent()),
                 createDatabase(c));
